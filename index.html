@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Udapt 2.0 — Performance &amp; neural readiness</title>
+  <meta name="description" content="Udapt 2.0 is a performance and neural-readiness product, made in Wales. Apply for the private beta.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0d10">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#top" aria-label="Udapt 2.0, home">Udapt<span>2.0</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#value">Product</a></li>
+          <li><a href="#watches">Watches</a></li>
+          <li><a href="#wales">Wales</a></li>
+          <li><a class="btn btn-small" href="#apply">Apply for beta</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Private beta · Made in Wales</p>
+        <h1 id="hero-title">Know when you're ready to <em>perform</em>.</h1>
+        <p class="lede">Udapt 2.0 turns the signals from your wrist into a clear read on neural readiness, so you can train hard when your body can take it and back off when it can't.</p>
+        <div class="actions">
+          <a class="btn" href="#apply">Apply for the beta</a>
+          <a class="btn btn-ghost" href="#value">See what it does</a>
+        </div>
+        <p class="note">Places are limited and reviewed by hand.</p>
+      </div>
+    </section>
+
+    <section id="value" class="section" aria-labelledby="value-title">
+      <div class="wrap">
+        <p class="eyebrow">The product</p>
+        <h2 id="value-title">Readiness, not just recovery scores.</h2>
+        <ul class="cards">
+          <li>
+            <h3>Neural readiness</h3>
+            <p>A focused view of how prepared your nervous system is for the session ahead.</p>
+          </li>
+          <li>
+            <h3>Built for performance</h3>
+            <p>Designed for people who train with intent and want guidance they can act on, not a wall of charts.</p>
+          </li>
+          <li>
+            <h3>Tested with real athletes</h3>
+            <p>The beta is shaped by the training habits of people in Wales, in real conditions.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="watches" class="section alt" aria-labelledby="watches-title">
+      <div class="wrap">
+        <p class="eyebrow">Supported watch families</p>
+        <h2 id="watches-title">Bring your wrist.</h2>
+        <p class="lede">The beta is targeting these watch families. Exact device eligibility is confirmed during beta review.</p>
+        <ul class="watch-grid">
+          <li class="feature">
+            <h3>Apple Watch</h3>
+            <p>Emphasis on <strong>Apple Watch Ultra</strong>.</p>
+          </li>
+          <li>
+            <h3>Pixel Watch</h3>
+            <p>Pixel Watch 2, 3 and 4.</p>
+          </li>
+          <li>
+            <h3>Galaxy Watch</h3>
+            <p>Galaxy Watch 6, 7 and Ultra.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="wales" class="section" aria-labelledby="wales-title">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Made in Wales</p>
+          <h2 id="wales-title">Designed and tested at home.</h2>
+          <p class="lede">Udapt is made in Wales. Initial testing is focused on four regions, so we can learn closely from a small group.</p>
+        </div>
+        <ul class="regions" aria-label="Initial testing regions">
+          <li>Cardiff</li>
+          <li>Swansea</li>
+          <li>Newport</li>
+          <li>Wrexham</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="apply" class="section alt" aria-labelledby="apply-title">
+      <div class="wrap narrow">
+        <p class="eyebrow">Beta application</p>
+        <h2 id="apply-title">Apply for the beta.</h2>
+        <p class="lede">We read every application. Tell us who you are and why you'd get the most from Udapt.</p>
+
+        <p class="proto" role="note"><strong>Front-end prototype.</strong> This form validates your answers in the browser only. Nothing is sent or stored yet.</p>
+        <!-- TODO(follow-up): connect submission to a real backend/form service and add privacy notice + consent wording. -->
+
+        <form id="apply-form" novalidate>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err">
+            <p class="err" id="name-err" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err">
+            <p class="err" id="email-err" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="location">Location</label>
+            <input id="location" name="location" type="text" autocomplete="address-level2" required aria-describedby="location-hint location-err">
+            <p class="hint" id="location-hint">Town or city. Initial testing: Cardiff, Swansea, Newport, Wrexham.</p>
+            <p class="err" id="location-err" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="watch">Watch model</label>
+            <select id="watch" name="watch" required aria-describedby="watch-hint watch-err">
+              <option value="">Select your watch</option>
+              <optgroup label="Apple Watch">
+                <option>Apple Watch Ultra (any generation)</option>
+                <option>Other Apple Watch</option>
+              </optgroup>
+              <optgroup label="Pixel Watch">
+                <option>Pixel Watch 2</option>
+                <option>Pixel Watch 3</option>
+                <option>Pixel Watch 4</option>
+              </optgroup>
+              <optgroup label="Galaxy Watch">
+                <option>Galaxy Watch 6</option>
+                <option>Galaxy Watch 7</option>
+                <option>Galaxy Watch Ultra</option>
+              </optgroup>
+              <option>Something else</option>
+            </select>
+            <p class="hint" id="watch-hint">Eligibility is confirmed during beta review.</p>
+            <p class="err" id="watch-err" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="background">Training background</label>
+            <textarea id="background" name="background" rows="4" required minlength="40" aria-describedby="background-hint background-err"></textarea>
+            <p class="hint" id="background-hint">Sport or discipline, how long, and how you train now. At least 40 characters.</p>
+            <p class="err" id="background-err" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="motivation">Why should we pick you?</label>
+            <textarea id="motivation" name="motivation" rows="5" required minlength="80" maxlength="800" aria-describedby="motivation-hint motivation-err"></textarea>
+            <p class="hint" id="motivation-hint"><span id="motivation-count">0</span>/800 · At least 80 characters. Be specific.</p>
+            <p class="err" id="motivation-err" hidden></p>
+          </div>
+
+          <div class="submit-row">
+            <button class="btn" type="submit" id="submit">Submit application</button>
+            <p class="status" id="status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year">2026</span> Udapt. Made in Wales.</p>
+      <p>Udapt is not a medical device and does not provide medical advice.</p>
+    </div>
+  </footer>
+</body>
+</html>
